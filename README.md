@@ -9,4 +9,6 @@
 - [x] datatypes
 - [x] objects
 - [x] arrays
-- [ ] functions
+- [x] functions
+- [x] what is operators
+- [x] arithmetic operators
