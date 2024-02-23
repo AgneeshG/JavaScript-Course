@@ -22,5 +22,19 @@ console.log(person.address.town);
 
 // array
 let favColors = ["White","Green","Blue","Orange","Purple"];
+favColors[6] = "Red";
 console.log(favColors);
 console.log(favColors[2]);
+console.log(favColors.length);
+
+// function
+function add(num1,num2){
+    result = num1 + num2;
+    console.log(result);
+}
+add(23,41)
+
+function greetUser(name,age){
+    console.log(name + " is " + age + " years old.");
+}
+greetUser("Vicky",43)
