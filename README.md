@@ -12,3 +12,6 @@
 - [x] functions
 - [x] what is operators
 - [x] arithmetic operators
+- [x] 
+- [x]
+- [x]
