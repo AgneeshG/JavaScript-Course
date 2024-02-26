@@ -428,3 +428,4 @@ function activities(name,age,walkSpeed,runSpeed){
 let kumar = activities(name="Kumar",age=25,walkSpeed=15,runSpeed=25)
 kumar.run()
 
+// Constructor functions
