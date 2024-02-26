@@ -193,4 +193,238 @@ console.log(typeof(time));
 let hr = time.getHours();
 console.log(hr);
 
+// Switch case
+
+// Grade sysyem S,A,B,C,D,U
+grade = "A"
+switch(grade){
+    case 'S':
+        console.log("Super grade");
+        break;
+    case 'A':
+        console.log("Excellent grade");
+        break;
+    case 'B':
+    case 'C':
+        console.log("Good grade");
+        break;
+    case 'D':
+        console.log("Just pass");
+        break;
+    case 'U':
+        console.log("Failed");
+        break;
+    default:
+        console.log("Unknown grade");
+}
+
+let marks = '78';
+switch(marks){
+    case (marks>90):
+        console.log("Super grage");
+        break;
+    case (marks>=60):
+        console.log("Pass");
+        break;
+    case (marks=='78'):
+        console.log("Fail");
+        break;
+    default:
+        console.log("Unknown grade");
+}
+
+// mobile buying suggestion
+let amount = 54000
+switch(true){
+    case (amount>=5000 && amount<=10000):
+        console.log("Buy basic mobile");
+        break;
+    case (amount>10000 && amount<=60000):
+        console.log("Buy Android mobile");
+        break;
+    case(amount>60000):
+        console.log("Buy iPhone mobile");
+        break;
+    default:
+        console.log("You can't afford mobile phone now");
+}
+
+//================================================================================================================
+
+// -- loops --
+// For loop
+// while loop
+// Do While loop
+// For-in loop
+// For-of loop
+
+//for loop
+
+for(let i=1; i<=5; i++){
+    console.log("Number # ",i);
+}
+
+console.log("Odd Numbers:");
+for(let i=1; i<6;i++){
+    if(i % 2 !== 0){
+        console.log("number #"+i);
+    }
+}
+
+for(let i = 10; i>=1; i--){
+    console.log("Number : "+i);
+}
+
+// while loop
+
+let j = 10;
+console.log("Even numbers : ");
+while(j>=1){
+    if(j%2 === 0){
+        console.log("Number : "+j);
+    }
+    j--;
+}
+
+// do while
+let i=11;
+do{
+    if(i%2 !== 0){
+        console.log("Odd number Do-While #"+i);
+    }
+    i++;
+}while(i <= 10);
+
+// for-in -> can iterate array and objects
+
+let person1={
+    name:"kumar",
+    age:31,
+    gender:"male"
+}
+
+for(let key in person1){
+    console.log(key +" : "+ person[key]);  //console.log(person1['name'])
+}
+
+let colors = ['red','blue','white']
+for(key in colors){
+    console.log(colors[key]);
+}
+
+// for-of // can iterate arrays, objects
+
+for(let color of colors){
+    console.log("Colors : "+ color);
+}
+
+//================================================================================================================
+
+// Objects
+
+let name3 = "Anbu";
+let age_ = 31;
+let interest = ['creating,teaching new things'];
+let address = {
+    city : 'coimbatore',
+    staate : "tamilnadu"
+}
+
+// let msg = "My name is "+name3+", i love "+interest;
+// console.log(msg);
+
+// let msg1 = `My name is ${name3} and i love ${interest}`;
+// console.log(msg1);
+
+// function greeting(){
+//     let msg = `My name is ${name3} and i love ${interest}`;
+//     console.log(msg);
+// }
+// greeting();
+
+
+// Object Oriented Programming(OOP)
+let person4 = {
+    name:"Murugan",
+    age:24,
+    interest: ['creating','teaching newthings'],
+    isAlive:true,
+    address:{
+        city:"coimbatore",
+        state:"tamilnadu"
+    },
+    greeting: function(){
+        let msg = `My name is ${this.name} and i love ${this.interest}`;
+        console.log(msg);
+    }
+};
+person4.greeting();
+
+// Factory functions
+
+function createPerson(){
+    let person = {
+        name:"Anbu",
+        greeting: function(){
+            let msg = `My name is ${name}`
+            console.log(msg);
+        }
+    };
+    return person;
+}
+
+function createPerson(){
+    return {
+        name:"Anbu",
+        greeting: function(){
+            let msg = `My name is ${name}`
+            console.log(msg);
+        }
+    };
+}
+
+function createPerson(name){
+    return {
+        name:name,  // function using parameter
+        greeting: function(){
+            let msg = `My name is ${name}`
+            console.log(msg);
+        }
+    };
+}
+
+function createPerson1(name){
+    return {
+        name,    // parameter and key name is same.
+        greeting: function(){
+            let msg = `My name is ${name}`
+            console.log(msg);
+        }
+    };
+}
+
+let arivu = createPerson1("Arivu");
+arivu.greeting();
+let vimal = createPerson1("Vimal");
+vimal.greeting()
+
+
+function activities(name,age,walkSpeed,runSpeed){
+    return{
+        name:name,
+        age:age,
+        walkSpeed:walkSpeed,
+        runSpeed:runSpeed,
+        walk:function(){
+            let msg = `${this.name} can walk ${this.walkSpeed}km per hour.`;
+            console.log(msg);
+        },
+        run(){    // simplified method 
+            let msg = `${name} can run ${this.runSpeed}km per hour.`;
+            console.log(msg);
+        }
+    };
+}
+let kumar = activities(name="Kumar",age=25,walkSpeed=15,runSpeed=25)
+kumar.run()
 
