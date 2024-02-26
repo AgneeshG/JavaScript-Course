@@ -437,3 +437,5 @@ function Person5(name){
 }
 let vel = new Person5("Vel");   // 'new' keyword creates a empty object
 vel.greeting();
+
+// Dynamic objects
