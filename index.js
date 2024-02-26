@@ -429,3 +429,11 @@ let kumar = activities(name="Kumar",age=25,walkSpeed=15,runSpeed=25)
 kumar.run()
 
 // Constructor functions
+function createPerson1(name){
+    return {
+        name,    // parameter and key name is same.
+        greeting: function(){
+            console.log(`My name is ${name}`);
+        }
+    };
+}
