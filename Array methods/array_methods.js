@@ -35,7 +35,36 @@ console.log(letters.at(2));
 // copyWithin() method
 console.log("3. Array.prototype.copyWithin() : ");
 const fruits1 = ['apple','banana','orange','grape','mango','cherry','papaya'];
-console.log(fruits1.copyWithin(3,0,6));
-// console.log(fruits1.copyWithin(3,1,2)); 
-// console.log(fruits1.copyWithin(0,1,3)); 
+// console.log(fruits1.copyWithin(0,3,4));  // -> ['grape', 'banana', 'orange', 'grape', 'mango', 'cherry', 'papaya']
+// console.log(fruits1.copyWithin(0,3,5));  // -> ['grape', 'mango', 'orange', 'grape', 'mango', 'cherry', 'papaya']
+console.log(fruits1.copyWithin(2,4,6));  // -> ['apple', 'banana', 'mango', 'cherry', 'mango', 'cherry', 'papaya']
 
+// --------------------------------------------
+
+// entries() method
+console.log("3. Array.prototype.entries() : ");
+const fruits2 = ['apple','grape','orange','banana'];
+for(let fruit of fruits1){
+    console.log(fruit);
+}
+
+console.log("-----");
+
+fruitEntries = fruits1.entries()
+fruitEntries2 = fruits2.entries()
+// console.log(fruitEntries.next().value);  // -> [0, 'apple']
+
+// for(let fruit of fruitEntries){
+//     console.log(fruit);
+//     console.log(fruit[0]);
+//     console.log(fruit[1]);
+// }
+
+// for(let[index,value] of fruitEntries2){
+//     console.log(value, index);
+// }
+
+// --------------------------------------------
+
+// values() method
+console.log("Array.prototype.values() : ");
