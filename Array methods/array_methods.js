@@ -204,7 +204,6 @@ console.log(fruits4);
 /* ---- pop() method - Used to remove the last element of an array. ---- */
 
 console.log("17. Array.prototype.pop() : ");
-
 let removedLastFruit = fruits4.pop()
 console.log(removedLastFruit); // -> pine apple
 fruits4.pop()
@@ -213,7 +212,7 @@ console.log(fruits4);
 
 /* ---- shift() method - Used to remove first element of an array. ---- */
 
-console.log("18. Array.prototype.pop() : ");
+console.log("18. Array.prototype.shift() : ");
 let animals = ['lion','tiger','dog','cat','rat']
 let removedFirstAnimal = animals.shift()
 console.log(removedFirstAnimal); // -> lion
@@ -223,13 +222,39 @@ console.log(animals);  // -> ['dog', 'cat', 'rat']
 
 /* ---- slice() method - Used to extract a portion of an array and return it as a new array. ---- */
 
+console.log("18. Array.prototype.slice() : ");
+animals = ['lion','deer','tiger','goat','dog','cat']
+let sliceAnimals = animals.slice(1,5)
+console.log(sliceAnimals); // -> ['deer', 'tiger', 'goat', 'dog']
 
 
+/* ---- splice() method - Used to change the contents of an array removing or replacing existing elements and/or adding new elements in place  ---- */
+console.log("19. Array.prototype.splice() : ");
+animals.splice()
+numbers = ['one','two','three','four','five','six','seven'];
+numbers.splice(2,3) // -> removes three elements from index 2
+console.log(numbers);  // -> ['one', 'two', 'six', 'seven']
+numbers.splice(1,2, /* adding new elements is array -> */'1.one','2.two','3.three','4.four')
+console.log(numbers);  // -> ['one', '1.one', '2.two', '3.three', '4.four', 'seven']
+
+/* ----  toSpliced() method - Used to    ---- */
+console.log("20. Array.prototype.toSpliced() : ");
+numbers1 = ['one','two','three','four','five','six','seven'];
+splicedNumbers = numbers1.toSpliced(1,5)
+console.log(splicedNumbers);  // -> ['one', 'seven']
 
 
+/* ---- concat() method - Used to combine two or more arrays and create a new array without modifying the original arrays. ---- */
+console.log("21. Array.prototype.concat() : ");
+const breakfast = ['Idle','Dosa','Poori']
+const lunch = ['Chicken Biriyani','Coffee']
+const dinner = ['Chicken Fried Rice','Milk']
+const overallFood = breakfast.concat(lunch,dinner,'chips')
+console.log(overallFood);
 
-
-
+    // Spread Operator
+const overallFood_spreadoperator = [...breakfast, ...lunch, ...dinner, 'juice']
+console.log(overallFood_spreadoperator);
 
 
 /* ----  ---- */

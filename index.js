@@ -427,6 +427,8 @@ function personActivities(name,age,walkSpeed,runSpeed){    // camelcase : myFirs
 }
 let kumar = personActivities(name="Kumar",age=25,walkSpeed=15,runSpeed=25)
 kumar.run()
+// console.log(personActivities.length); // -> 4 (4 parameters in this function)
+
 
 // Constructor functions
 function Person5(name){
@@ -438,4 +440,69 @@ function Person5(name){
 let vel = new Person5("Vel");   // 'new' keyword creates a empty object
 vel.greeting();
 
-// Dynamic objects
+// Dynamic objects   ->  Access, Create, Delete
+
+const person5 = {
+    name: "Gokul"
+}
+person5.age = 31
+person5.address = {
+    city:"Coimbatore",
+    state:"Tamilnadu"
+},
+person5.greeting = function(){}
+console.log(person5);
+
+// Constructor property
+
+// let name_ = "Hari";  // -> name_ = new String("Hari"); 
+// let age1 = 24;  // -> age1 = new Number(24);
+// isAlive = true  // -> isAlive = new Boolean(true)
+// console.log(name_,age1,isAlive);
+
+let name_ = new String("Vicky");
+let age1 = new Number(25)
+isAlive = new Boolean(true)
+console.log(name_,age1,isAlive);
+
+// length of function
+console.log(personActivities.length); // -> 4 (4 parameters in this function)
+
+// Primitive value types and Reference types
+
+// Primitive type
+x=10;
+y=x;
+x=21;
+console.log(y); // -> 10
+
+// Reference type
+x = {value : 10};
+y = x
+x.value = 25
+console.log(y); // -> 25  
+
+
+let cartObj = {
+    totalObjects: 5,
+    groceryItems:3,
+    others:2
+};
+function updateCart(item){
+    item.totalObjects++
+}
+updateCart(cartObj);
+console.log(cartObj.totalObjects);
+
+
+let number = {value:12}
+let num_ = number
+console.log(num_.value);   // -> 12
+function numIncrement(num){
+    num.value++;
+}
+numIncrement(number)
+console.log(num_.value); // -> 13
+
+
+
