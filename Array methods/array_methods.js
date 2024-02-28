@@ -33,7 +33,7 @@ console.log(letters.at(2));
 // --------------------------------------------
 
 // copyWithin() method
-console.log("3. Array.prototype.copyWithin() : ");
+console.log("4. Array.prototype.copyWithin() : ");
 const fruits1 = ['apple','banana','orange','grape','mango','cherry','papaya'];
 // console.log(fruits1.copyWithin(0,3,4));  // -> ['grape', 'banana', 'orange', 'grape', 'mango', 'cherry', 'papaya']
 // console.log(fruits1.copyWithin(0,3,5));  // -> ['grape', 'mango', 'orange', 'grape', 'mango', 'cherry', 'papaya']
@@ -42,7 +42,7 @@ console.log(fruits1.copyWithin(2,4,6));  // -> ['apple', 'banana', 'mango', 'che
 // --------------------------------------------
 
 // entries() method
-console.log("3. Array.prototype.entries() : ");
+console.log("5. Array.prototype.entries() : ");
 const fruits2 = ['apple','grape','orange','banana'];
 for(let fruit of fruits1){
     console.log(fruit);
@@ -67,4 +67,169 @@ fruitEntries2 = fruits2.entries()
 // --------------------------------------------
 
 // values() method
-console.log("Array.prototype.values() : ");
+console.log("6. Array.prototype.values() : ");
+const fruitValues = fruits2.values()
+
+console.log(fruitValues.next().value);  // -> apple
+console.log(fruitValues.next().value);  // -> grape
+
+// for(fruit of fruitValues){ 
+//     console.log(fruit);
+// }
+
+// --------------------------------------------
+
+// every() method
+console.log("7. Array.prototype.every() : ");
+
+const marks = [54,73,90,45,86]
+let result = marks.every((mark)=>{
+    return mark>50
+})
+const result2 = marks.every((mark)=> { return mark>35 })
+console.log(result); // -> false
+console.log(result2); // -> true
+
+// --------------------------------------------
+
+// fill() method
+console.log("8. Array.prototype.fill() : ");
+
+const array1 = [1,2,3,4,5]
+const array2 = [1,2,3,4,5]
+const array3 = [1,2,3,4,5]
+console.log(array1.fill(21,1,2));  // -> [1, 21, 3, 4, 5]
+console.log(array2.fill(15,3));  // -> [1, 2, 3, 15, 15]
+console.log(array3.fill(10));  // -> [10, 10, 10, 10, 10]
+console.log(array1.fill(50,1,3));  // -> [1, 50, 50, 4, 5]
+
+// --------------------------------------------
+
+// filter() method
+console.log("9. Array.prototype.filter() : ");
+
+const humanNames = ['Anu','Banu', 'Cathy', 'Dory', 'Elie']
+filterNames = humanNames.filter((humanName) => humanName.length>3)
+console.log(filterNames);  // -> ['Banu', 'Cathy', 'Dory', 'Elie']
+
+const users = [
+    {
+        id:1,
+        name:'Anbu',
+        active:true
+    },
+    {
+        id:2,
+        name:'Trisha',
+        active:true
+    },
+    {
+        id:3,
+        name:'Krishna',
+        active:false
+    }
+]
+const filterUsers = users.filter((user)=> user.active === true)
+console.log(filterUsers);  // -> output - 2 objects(Anbu and Trisha)
+console.log(filterUsers[1].name);  // -> Trisha
+
+// --------------------------------------------
+
+// find() method
+console.log("10. Array.prototype.find() : "); // -> finds value left to right
+
+const number1 = [5,10,14,51,2,31]
+const num3 = number1.find((num)=>{
+    return num>12
+})
+console.log(num3);  // -> 14
+
+// --------------------------------------------
+
+// findlast() method  
+console.log("11. Array.prototype.findlast() : ");  // -> finds value right to left
+
+const num4 = number1.findLast((num)=> {
+    return num>4
+})
+console.log(num4);  // -> 31
+
+// --------------------------------------------
+
+// findIndex() method
+console.log("12. Array.prototype.findIndex : ");  // -> returns index value
+
+const num5 = number1.findIndex((num)=>{
+    return num>20
+})
+console.log(num5);  // -> 3
+
+// --------------------------------------------
+
+// findLastIndex() method
+console.log("13. Array.prototype.findLastIndex : ");  // -> finds index value from last(right to left)
+const num6 = number1.findLastIndex((num)=>{
+    return num>20
+})
+console.log(num6);  // -> 5
+
+// --------------------------------------------
+
+/* ---- toString() method - Used to --- */
+console.log("14. Array.prototype.toString() : ");
+
+list = ['abc',21,'bird','animal',41]
+console.log(list.toString());  // ->  abc,21,bird,animal,41
+
+/* ---- push() method - Used to add one or more elements to the end of an array. ---- */
+
+console.log("15. Array.prototype.push() : ");
+let fruits3 = ['apple','banana','grape']
+fruits3.push('papaya','cherry','orange')
+console.log(fruits3);
+fruits3.forEach((fruit)=>{
+    console.log(fruit.toUpperCase());
+})
+
+
+/* ---- unshift() method - Used to add one or more elements to the beginning of an array. ---- */
+
+console.log("16. Array.prototype.unshift() : ");
+let fruits4 = ['apple','orange','pine apple'];
+let fruits4_result = fruits4.unshift('banana','cherry','papaya')
+console.log(fruits4_result);  // -> 6 (length of an array)
+console.log(fruits4);
+
+
+/* ---- pop() method - Used to remove the last element of an array. ---- */
+
+console.log("17. Array.prototype.pop() : ");
+
+let removedLastFruit = fruits4.pop()
+console.log(removedLastFruit); // -> pine apple
+fruits4.pop()
+console.log(fruits4);
+
+
+/* ---- shift() method - Used to remove first element of an array. ---- */
+
+console.log("18. Array.prototype.pop() : ");
+let animals = ['lion','tiger','dog','cat','rat']
+let removedFirstAnimal = animals.shift()
+console.log(removedFirstAnimal); // -> lion
+animals.shift()
+console.log(animals);  // -> ['dog', 'cat', 'rat']
+
+
+/* ---- slice() method - Used to extract a portion of an array and return it as a new array. ---- */
+
+
+
+
+
+
+
+
+
+
+/* ----  ---- */
