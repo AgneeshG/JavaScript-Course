@@ -221,7 +221,6 @@ console.log(animals);  // -> ['dog', 'cat', 'rat']
 
 
 /* ---- slice() method - Used to extract a portion of an array and return it as a new array. ---- */
-
 console.log("18. Array.prototype.slice() : ");
 animals = ['lion','deer','tiger','goat','dog','cat']
 let sliceAnimals = animals.slice(1,5)
@@ -236,6 +235,7 @@ numbers.splice(2,3) // -> removes three elements from index 2
 console.log(numbers);  // -> ['one', 'two', 'six', 'seven']
 numbers.splice(1,2, /* adding new elements is array -> */'1.one','2.two','3.three','4.four')
 console.log(numbers);  // -> ['one', '1.one', '2.two', '3.three', '4.four', 'seven']
+
 
 /* ----  toSpliced() method - Used to    ---- */
 console.log("20. Array.prototype.toSpliced() : ");
@@ -255,6 +255,22 @@ console.log(overallFood);
     // Spread Operator
 const overallFood_spreadoperator = [...breakfast, ...lunch, ...dinner, 'juice']
 console.log(overallFood_spreadoperator);
+
+
+/* ----  reverse() method - Used to reverse elements of an array.(it changes the original array) ---- */
+console.log("22. Array.prototype.reverse() : ");
+const arr1 = ['one','two','three','four','five'];
+const reversedArray = arr1.reverse();
+console.log("arr1 : ",arr1);
+console.log("Reversed array",reversedArray);
+
+
+/* ----  toReversed() method - Used to reverse the elements in an array without mutating the original array.  ---- */
+console.log("23. Array.prototype.toReversed() : ");
+const arr2 = ['one','two','three','four','five'];
+const reversedArray2 = arr2.toReversed();
+console.log("arr2 :",arr2);
+console.log("Reversed array : ",reversedArray2);
 
 
 

@@ -30,3 +30,15 @@
 // } else {
 //     alert("Sorry! You are not allowed.");
 // }
+
+
+function sampleFunc(a,b){
+    return {
+        add_ : a+b,
+        sub_ : a-b,
+        div_ : a/b,
+        mul_ : a*b
+    };
+}
+var mathObject = sampleFunc(50,10);
+console.log(mathObject);

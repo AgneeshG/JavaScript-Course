@@ -4,6 +4,7 @@
 string1 = 'Hello world! Good morning. Java Script'
 console.log(string1.length);
 
+/* ---- Escape notation ---- */
 
 /* ------------------------- String methods ------------------------- */
 

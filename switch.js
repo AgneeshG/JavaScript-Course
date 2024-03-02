@@ -1,18 +1,22 @@
+let today = new Date().getDay()
+console.log(today);
 let day = 3;
-switch(day){
+switch(today){
     case 1:
+    case 'Monday':
         console.log("Monday");
         break;
     case 2:
         console.log("Tuesday");
         break;
-    case 3:
+    case 'Friday':
         console.log("Wedneday");
         break;
     case 4:
         console.log("Thursday");
         break;
     case 5:
+    case 'Friday':
         console.log("Friday");
         break;
     case 6:
