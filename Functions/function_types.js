@@ -32,3 +32,13 @@ sampleFunc3('vatri')
 
 
 // four - callback function
+function mainFunc(func){
+    console.log("Main function executed.");
+    func();
+};
+
+function callBackFunc(){
+    console.log("Call back function executed.");
+};
+mainFunc(callBackFunc);
+

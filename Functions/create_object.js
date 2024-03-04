@@ -50,3 +50,22 @@ console.log(person);
 person.age = 31  // change age 
 console.log(person);
 // person = "Aravind"   // -> error
+
+
+
+function createObj(objName,name,age){
+    objName.name = name,
+    objName.age = age
+}
+
+
+person_1 = {
+    gender:'male',
+    address:{
+        city:'coimbatore',
+        state:'tamilnadu'
+    }
+}
+
+createObj(person_1,'Arun',31);
+console.log(person_1);
