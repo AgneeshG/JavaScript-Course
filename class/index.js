@@ -8,6 +8,7 @@ class Product{
     displayProduct(){
         console.log(`Product : ${this.name}`);
         console.log(`Price : $${this.price.toFixed(2)}`);
+        return this   // method chaining
     }
     displayFeatures(){
         console.log(`You don't have any special offers.`);
@@ -20,11 +21,10 @@ class Product{
     }
 }
 
-const salesTax = 0.06
-const product1 = new Product('shirt',19.99);
+
 
 class plusMembers extends Product{
-    static numberOfUsers;
+    static numberOfPlusMembers;
     constructor(name,price){
         super(name,price);
         this.discount = 0.05
@@ -42,17 +42,20 @@ class plusMembers extends Product{
 
 
 
-
+const salesTax = 0.06
+const product1 = new Product('shirt',19.99);
 const product2 = new Product('pant',21.999);
 
-product2.displayProduct();
+const plusMemberOne = new plusMembers('tshirt',10.99)
 
+
+
+product2.displayProduct();
 console.log("Total : ",product2.calculateTotal(salesTax));
 Product.totalUsers()
-
-
-const plusMemberOne = new plusMembers('tshirt',10.99)
 console.log(plusMemberOne.calculateTotal(salesTax));
 console.log("Total : ",product1.calculateTotal(salesTax));
-// console.log("Total : ",product1.calculateTotalWithDiscount(salesTax));
-product1.calculateTotal();
+
+let var1 = product1.displayProduct().calculateTotal(salesTax)  // method chaining
+console.log(var1);
+

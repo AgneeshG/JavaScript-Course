@@ -9,6 +9,7 @@ switch(today){
     case 2:
         console.log("Tuesday");
         break;
+    case 3:
     case 'Friday':
         console.log("Wedneday");
         break;
