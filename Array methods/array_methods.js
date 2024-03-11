@@ -2,10 +2,14 @@ const fruits = ['apple','orange','papaya','cherry'];
 
 // forEach() method
 console.log("1. Array.prototype.forEach() : ");
+f = []
 fruits.forEach((fruit)=>{
     // console.log(fruit);
     console.log(fruit.toUpperCase());
+    f.push(fruit)
 })
+console.log("f : ",f);
+
 
 // --------------------------------------------
 
@@ -28,7 +32,7 @@ console.log(number, var2);
 console.log("3. Array.prototype.at() : ");
 const letters = ['a','b','c','d'];
 // console.log(letters[2]);
-console.log(letters.at(2));
+console.log(letters.at(2));  // c
 
 // --------------------------------------------
 
