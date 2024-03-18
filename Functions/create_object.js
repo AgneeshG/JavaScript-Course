@@ -58,7 +58,6 @@ function createObj(objName,name,age){
     objName.age = age
 }
 
-
 person_1 = {
     gender:'male',
     address:{
@@ -66,6 +65,5 @@ person_1 = {
         state:'tamilnadu'
     }
 }
-
 createObj(person_1,'Arun',31);
 console.log(person_1);

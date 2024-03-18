@@ -69,6 +69,7 @@ let div2 = document.createElement("div")
 div2.innerHTML = "<p>Create element method</p>"
 div2.innerHTML = "<p>Hello world.</p>"
 document.body.appendChild(div2)
+div1.title = 
 console.log(div2);
 
 
